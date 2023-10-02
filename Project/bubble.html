@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="DAA_Project.html">Home</a>
+                <a href="bubble.html">Bubble Sort</a>
+                <a href="Quick.html">Quick Sort</a>
+                <a href="merge.html">Merge Sort</a>
+                <a href="insertion.html">Insertion Sort</a>
+                <a href="selection.html">Selection Sort</a>
+                <a href="heap.html">Heap Sort</a>
+                <a href="SLBI_PROJECT/Introductory_page.html">SLBI_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        <!-- Additional content for Bubble Sort -->
+    <div>
+        <h1><u>Bubble Sort</u></h1>
+        <p>A sorting method known as bubble sort analyzes two nearby elements and swaps them until the desired
+            order is achieved. This algorithm is not suitable for large data sets as its average and worst-case
+            time complexity is quite high.<br>Each element of the array moves to the end in each iteration, much
+            like the movement of air bubbles in water that rise to the surface. Consequently, it is known as a
+            bubble sort.
+        </p>
+        <figure>
+            <img alt="Sorting an array" height="334" src="media/Bubble_sort.png"
+                title="Bubble Sort" width="678">
+            <p>Here, we are sorting the array in ascending order.</p>
+        </figure>
+        <hr>
+    </div>
+    <h1><u>Code:</u></h1>
+    <pre>
+        <code>
+
+def bubbleSort(arr):
+	n = len(arr)
+	
+	# Traverse through all array elements
+	for i in range(n):
+		swapped = False
+
+		# Last i elements are already in place
+		for j in range(0, n-i-1):
+
+			# Traverse the array from 0 to n-i-1
+			# Swap if the element found is greater
+			# than the next element
+			if arr[j] &gt; arr[j+1]:
+				arr[j], arr[j+1] = arr[j+1], arr[j]
+				swapped = True
+		if (swapped == False):
+			break
+
+
+# Driver code to test above
+if __name__ == &quot;__main__&quot;:
+	arr = [64, 34, 25, 12, 22, 11, 90]
+
+	bubbleSort(arr)
+
+	print(&quot;Sorted array:&quot;)
+	for i in range(len(arr)):
+		print(&quot;%d&quot; % arr[i], end=&quot; &quot;)
+
+            </code>
+
+        </pre>
+        <h1><u>Output:</u></h1>
+        <pre>
+            <code>
+                Sorted array: 
+                11 12 22 25 34 64 90 
+
+            </code>
+        </pre>
+        <h1><u>Bubble Sort Example</u></h1>
+
+        <div class="input-container">
+            <label for="numbers">Enter numbers separated by commas:</label>
+            <input type="text" id="numbers">
+            <button onclick="sortNumbers()">Sort</button>
+        </div>
+    
+        <div class="output-container">
+            <p>Sorted numbers:</p>
+            <pre id="sorted-numbers"></pre>
+        </div>
+
+        <div>
+            <h2><span><u>Complexity Analysis of Bubble Sort</u></span><span>:</span></h2>
+            <p dir="ltr" style="text-align:justify"><b><strong>Time Complexity: </strong></b><span>O(N</span><sup><span>2</span></sup><span>)</span><br><b><strong>Auxiliary Space:</strong></b><span> O(1)</span></p>
+            <h2><b><strong><u>Advantages of Bubble Sort:</u></strong></b></h2>
+            <ul><li value="1"><span>Bubble sort is easy to understand and implement.</span></li><li value="2"><span>It does not require any additional memory space.</span></li><li value="3"><span>It is a stable sorting algorithm, meaning that elements with the same key value maintain their relative order in the sorted output.</span></li></ul>
+            <h2><b><strong><u>Disadvantages of Bubble Sort:</u></strong></b></h2>
+            <ul><li value="1"><span>Bubble sort has a time complexity of O(N</span><sup><span>2</span></sup><span>) which makes it very slow for large data sets.</span></li><li value="2"><span>Bubble sort is a comparison-based sorting algorithm, which means that it requires a comparison operator to determine the relative order of elements in the input data set. It can limit the efficiency of the algorithm in certain cases.</span></li></ul>
+
+        </div><hr>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+    <script>
+        function sortNumbers() {
+            const inputElement = document.getElementById("numbers");
+            const outputElement = document.getElementById("sorted-numbers");
+
+            // Get the input string and split it into an array of numbers
+            const input = inputElement.value.trim();
+            const numbers = input.split(",").map(Number);
+
+            // Implement the Bubble Sort algorithm
+            for (let i = 0; i < numbers.length; i++) {
+                for (let j = 0; j < numbers.length - 1; j++) {
+                    if (numbers[j] > numbers[j + 1]) {
+                        // Swap the elements if they are in the wrong order
+                        const temp = numbers[j];
+                        numbers[j] = numbers[j + 1];
+                        numbers[j + 1] = temp;
+                    }
+                }
+            }
+
+            // Display the sorted numbers
+            outputElement.textContent = numbers.join(", ");
+        }
+    </script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
+
+
+

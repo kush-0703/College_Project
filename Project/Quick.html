@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="DAA_Project.html">Home</a>
+                <a href="bubble.html">Bubble Sort</a>
+                <a href="Quick.html">Quick Sort</a>
+                <a href="merge.html">Merge Sort</a>
+                <a href="insertion.html">Insertion Sort</a>
+                <a href="selection.html">Selection Sort</a>
+                <a href="heap.html">Heap Sort</a>
+                <a href="SLBI_PROJECT/Introductory_page.html">SLBI_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        <div class="row padding-64">
+            <div class="twothird container">
+                <h1 class="text-teal"><u>Quick Sort</u></h1>
+                <p>QuickSort is a sorting algorithm based on the Divide and Conquer algorithm. It selects an element as a
+                    pivot and divides the given array around the selected pivot by positioning the pivot in the appropriate
+                    location in the sorted array.<br>One of the most well-liked sorting algorithms, quicksort, sorts an
+                    array of n elements in a typical scenario using nlogn comparisons.</p>
+                <figure>
+                    <img alt="Sorting an array" height="334" src="media/Quick_sort_algorithm.png"
+                        title="Quick Sort" width="678">
+                    <p>Here, we are sorting the array in ascending order.</p>
+                </figure>
+            </div>
+            <div>
+                <h3><u><span>Complexity Analysis of Quick Sort</span></a><span>:</span></u></h3>
+                <p dir="ltr"><b><strong>Time Complexity:</strong></b></p>
+                <ul><li value="1"><b><strong>Best Case</strong></b><span>: Ω (N log (N))</span><br><span>The best-case scenario for quicksort occur when the pivot chosen at the each step divides the array into roughly equal halves.</span><br><span>In this case, the algorithm will make balanced partitions, leading to efficient Sorting.</span></li><li value="2"><b><strong>Average Case: θ&nbsp;( N log (N))</strong></b><span></span><br><span>Quicksort’s average-case performance is usually very good in practice, making it one of the fastest sorting Algorithm.</span></li><li value="3"><b><strong>Worst Case: O(N2)</strong></b><span></span><br><span>The worst-case Scenario for Quicksort occur when the pivot at each step consistently results in highly unbalanced partitions. When the array is already sorted and the pivot is always chosen as the smallest or largest element. To mitigate the worst-case Scenario, various techniques are used such as choosing a good pivot (e.g., median of three) and using Randomized algorithm (Randomized Quicksort ) to shuffle the element before sorting.</span></li><li value="4"><b><strong>Auxiliary Space:</strong></b><span> O(1), if we don’t consider the recursive stack space. If we consider the recursive stack space then, in the worst case quicksort could make&nbsp;</span><i><em class="GFGEditorTheme__textItalic">O</em></i><span>(</span><i><em class="GFGEditorTheme__textItalic">N</em></i><span>).</span></li></ul>
+                <h2><u><b><strong>Advantages of Quick Sort:</strong></b></u></h2>
+                <ul><li value="1"><span>It is a divide-and-conquer algorithm that makes it easier to solve problems.</span></li><li value="2"><span>It is efficient on large data sets.</span></li><li value="3"><span>It has a low overhead, as it only requires a small amount of memory to function.</span></li></ul>
+                <h2><u><span>Disadvantages of Quick Sort:</span></u></h2>
+                <ul><li value="1"><span>It has a worst-case time complexity of O(N</span><sup><span>2</span></sup><span>), which occurs when the pivot is chosen poorly.</span></li><li value="2"><span>It is not a good choice for small data sets.</span></li><li value="3"><span>It is not a stable sort, meaning that if two elements have the same key, their relative order will not be preserved in the sorted output in case of quick sort, because here we are swapping elements according to the pivot’s position (without considering their original positions).</span></li></ul>
+            </div><hr>
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+
+        /* CSS for image card view */
+.image-card {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for image captions */
+.image-card-caption {
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5; /* Background color for caption */
+    border-top: 1px solid #ddd; /* Add a top border for caption */
+}
+
+.image-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>BioinformaticsJourney.com</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a class="Intro" href="Introductory_page.html">Intro to Bioinformatics</a>
+                <a class="applications" href="Applications.html">Applications of Bioinformatics</a>
+                <a class="scope" href="scope.html">Scope of Bioinformatics</a>
+                <a class="evolution" href="evolution.html">Evolution of Bioinformatics</a>
+                <a class="Daa" href="/DAA_Project.html">DAA_PROJECT</a>
+                    </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        <div class="main-content" id="mainContent">
+            <!-- Your existing content goes here -->
+            <div class="image-card">
+                <figure>
+                        <img alt="Sorting an array" height="534" src="media/into_bioinfo.png"title="Sorting an array" width="978">
+                </figure>
+            </div>
+            
+            <h1><u>Introduction to the World of Bioinformatics</u></h1>
+            <p>Bioinformatics is an interdisciplinary field that encompasses different branches of science, including mathematics, information science, and biology, to solve complex problems associated with cellular life and its complex molecular events. This chapter holds a brief introduction to the world of bioinformatics, including its origin, history, and the milestones it has achieved over the period of time. It also holds an account of different bioinformatics tools and databases that are widely used in storage, visualization, and interpretation of any molecular data. Though several research groups are generating a plethora of genomic data from a model and non-model systems, improvements are still required in the existing algorithms and bioinformatics tools, which will upscale the analysis process and the accuracy of prediction of structures and functions to a great extent.</p>
+    
+            <!-- Additional content -->
+            <h1><u>How does bioinformatics work?</u></h1>
+            <div class="image-card">
+                <figure>
+                    <img alt="Working of bioinformatics" height="334" src="media/how_bioinfo_work.webp"
+                        title="Working of bioinformatics" width="678">
+                </figure>
+            </div>
+            
+            <p>During an undergraduate capstone project, academic staff may instruct their students to perform bioinformatics – which is becoming an increasingly vague term. So, first, I believe it is important to understand what bioinformatics is. At its heart, bioinformatics is the use of computation to understand more about biology and should not be thought of as a replacement to traditional laboratory research – rather a synergistic partner. Another way to phrase it would be to use data science approaches to ask questions in the life sciences.
+    
+                To help visualize the question ‘what is bioinformatics’, we can try to frame how bioinformatics works in research. Many questions from life science come from the natural world/in vivo – this can include any range of topics such as investigating the molecular causes of diseases, contrasting virulence of different pathogens or researching the origins of human evolution. Researchers could then replicate and test what was seen in the natural world in the laboratory using in vitro techniques such as a western blot to measure the effect a gene mutation has on the protein expression level of a known oncogenic gene, or infecting cells with a pathogen and contrasting the viability between infected cells and non-infected cells. A bioinformatician would then use what has been measured in vitro to inform computational analysis (in silico). The analysis itself can range from measuring samples in parallel to reduce manual effort, running specialist software for quality control or simply producing graphs in a popular coding language like Python or R. The goal of the analysis could be to generate testable hypothesis which can be validated back in the laboratory, and this in turn would lead to learning something new about the natural world. </p>
+            <hr>
+           
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
+
+
+

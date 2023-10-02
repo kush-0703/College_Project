@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="DAA_Project.html">Home</a>
+                <a href="bubble.html">Bubble Sort</a>
+                <a href="Quick.html">Quick Sort</a>
+                <a href="merge.html">Merge Sort</a>
+                <a href="insertion.html">Insertion Sort</a>
+                <a href="selection.html">Selection Sort</a>
+                <a href="heap.html">Heap Sort</a>
+                <a href="SLBI_PROJECT/Introductory_page.html">SLBI_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        <div class="row padding-64">
+            <div class="twothird container">
+                <h1 class="text-teal"><u>Merge Sort</u></h1>
+                <p>A sorting technique known as merge sort divides a large array into smaller subarrays, sorts each subarray
+                    individually, and then merges the sorted subarrays back together to create the final sorted
+                    array.<br>Merge sort is based on the divide and conquer method. It is one of the most esteemed
+                    algorithms, with an O(n log n) worst-case time complexity.</p>
+                <figure>
+                    <img alt="Sorting an array" height="334" src="media/Merge-Sort-Algorithm.png"
+                        title="Quick Sort" width="678">
+                    <p>Here, we are sorting the array in ascending order.</p>
+                </figure>
+        </div>
+        <div>
+            <h2><b><strong><u>Complexity Analysis of Merge Sort:</u></strong></b></h2>
+            <p dir="ltr"><b><strong>Time Complexity: </strong></b><span>O(N log(N)), &nbsp;Merge Sort is a recursive algorithm and time complexity can be expressed as following recurrence relation.&nbsp;</span></p>
+            <blockquote><p dir="ltr"><span>T(n) = 2T(n/2) + θ(n)</span></p></blockquote>
+            <p dir="ltr"><span>The above recurrence can be solved either using the Recurrence Tree method or the Master method. It falls in case II of the Master Method and the solution of the recurrence is θ(Nlog(N)).&nbsp;The time complexity of Merge Sort isθ(Nlog(N)) in all 3 cases (worst, average, and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.</span></p>
+            <p dir="ltr"><b><strong>Auxiliary Space:</strong></b><span> O(N), In merge sort all elements are copied into an auxiliary array. So N auxiliary space is required for merge sort.</span></p>
+            <h2><b><strong><u>Advantages of Merge Sort:</u></strong></b></h2>
+            <ul><li value="1"><b><strong>Stability</strong></b><span>: Merge sort is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.</span></li><li value="2"><b><strong>Guaranteed worst-case performance: </strong></b><span>Merge sort has a worst-case time complexity of O(N logN), which means it performs well even on large datasets.</span></li><li value="3"><b><strong>Parallelizable</strong></b><span>: Merge sort is a naturally parallelizable algorithm, which means it can be easily parallelized to take advantage of multiple processors or threads.</span></li></ul>
+            <h2><b><strong><u>Disadvantages of Merge Sort:</u></strong></b></h2>
+            <ul><li value="1"><b><strong>Space complexity:</strong></b><span> Merge sort requires additional memory to store the merged sub-arrays during the sorting process.&nbsp;</span></li><li value="2"><b><strong>Not in-place:</strong></b><span> Merge sort is not an in-place sorting algorithm, which means it requires additional memory to store the sorted data. This can be a disadvantage in applications where memory usage is a concern.</span></li><li value="3"><b><strong>Not always optimal for small datasets:</strong></b><span> For small datasets, Merge sort has a higher time complexity than some other sorting algorithms, such as insertion sort. This can result in slower performance for very small datasets.</span></li></ul>
+        </div><hr>
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

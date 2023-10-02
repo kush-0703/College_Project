@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+
+        /* CSS for image card view */
+.image-card {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for image captions */
+.image-card-caption {
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5; /* Background color for caption */
+    border-top: 1px solid #ddd; /* Add a top border for caption */
+}
+
+.image-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a class="Intro" href="Introductory_page.html">Intro to Bioinformatics</a>
+                <a class="applications" href="Applications.html">Applications of Bioinformatics</a>
+                <a class="scope" href="scope.html">Scope of Bioinformatics</a>
+                <a class="evolution" href="evolution.html">Evolution of Bioinformatics</a>
+                <a class="Daa" href="/DAA_Project.html">DAA_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        
+    <div class="main-content" id="mainContent">
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal"><u>Evolution of Bioinformatics</u></h1>
+                <div class="image-card">
+                    <figure>
+                        <img alt="Evolution" height="334" src="media/evolution.jpeg" title="Evolution" width="678">
+                    </figure>
+                </div>
+                
+                <p>The field of bioinformatics has evolved significantly over the years, driven by advances in genomics,
+                    computational technology, and data analysis methods. Here's an overview of the evolution of
+                    bioinformatics:</p>
+                <ul>
+                    <li>
+                        <strong>Early Beginnings (1950s-1960s):</strong> Bioinformatics traces its roots to the early
+                        days of computational biology when researchers began using computers to analyze biological
+                        data. Initial efforts focused on protein sequencing and DNA sequence analysis.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Genomic Era (1970s-1990s):</strong> The advent of DNA sequencing techniques like Sanger
+                        sequencing revolutionized bioinformatics. Bioinformatics tools emerged to store, manage, and
+                        analyze DNA and protein sequences. The GenBank and EMBL sequence databases were established.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Structural Biology (1980s-1990s):</strong> Protein structure prediction became a
+                        prominent area of bioinformatics. Techniques like X-ray crystallography and NMR spectroscopy
+                        produced protein structures for analysis. Databases like the Protein Data Bank (PDB) were
+                        created to store protein structures.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Genomic Sequencing Projects (2000s):</strong> The completion of the Human Genome Project
+                        marked a major milestone. Large-scale genomic sequencing projects for other organisms
+                        followed, leading to the accumulation of vast genomic data.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Post-Genomic Era (2000s-2010s):</strong> Functional genomics and systems biology gained
+                        prominence, focusing on understanding gene function and interactions. High-throughput techniques
+                        like microarrays and next-generation sequencing generated massive datasets. Bioinformatics tools
+                        for pathway analysis and gene expression profiling were developed.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Structural Bioinformatics Advances (2000s-2010s):</strong> Structural bioinformatics
+                        expanded with methods for protein-ligand docking, protein-protein interaction prediction, and
+                        drug discovery. Structural genomics initiatives aimed to determine the structures of all protein
+                        families.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Omics Integration (2010s-2020s):</strong> Bioinformatics integrated multi-omics data
+                        (genomics, transcriptomics, proteomics, metabolomics) for holistic analysis. Advances in data
+                        integration, machine learning, and network analysis contributed to systems biology.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Personalized Medicine (2010s-2020s):</strong> Bioinformatics played a crucial role in
+                        tailoring medical treatments based on individual genomic profiles. Pharmacogenomics used genetic
+                        information to predict drug responses.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Big Data and AI (2010s-Present):</strong> The field saw an explosion of biological data,
+                        leading to big data challenges. Artificial intelligence and machine learning techniques became
+                        essential for data analysis, feature extraction, and predictive modeling.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>COVID-19 Pandemic (2020s):</strong> The pandemic underscored the importance of
+                        bioinformatics in viral genomics, vaccine design, and drug discovery. Rapid sharing of genomic
+                        data and global collaboration highlighted the field's critical role in public health.
+                    </li>
+                    
+                </ul>
+                <p>
+                    Bioinformatics continues to evolve, with a focus on addressing complex biological questions, enabling
+                    precision medicine, and advancing our understanding of the molecular basis of life. Advances in data
+                    analysis, computational power, and interdisciplinary collaboration are expected to drive further
+                    innovation in the field.
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
+

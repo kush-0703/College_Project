@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="DAA_Project.html">Home</a>
+                <a href="bubble.html">Bubble Sort</a>
+                <a href="Quick.html">Quick Sort</a>
+                <a href="merge.html">Merge Sort</a>
+                <a href="insertion.html">Insertion Sort</a>
+                <a href="selection.html">Selection Sort</a>
+                <a href="heap.html">Heap Sort</a>
+                <a href="SLBI_PROJECT/Introductory_page.html">SLBI_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+              <h1 class="w3-text-teal"><u>Heap Sort</u></h1>
+              <p>Heap sort is a comparison-based sorting technique based on a binary heap data structure. This is similar to  selection sort where the smallest element is found first and the smallest element is placed first. Repeat the same process with the other elements.<br></p>
+              <figure>
+                <img alt="Sorting an array" height="334" src="media/heap_sort.webp" title="Quick Sort" width="678">
+                <P>Here, we are sorting the array in ascending order.</P>
+              </figure>
+            </div>
+          </div>
+          <div>
+            <h2><u><span>Complexity Analysis of </span><b><strong>Heap Sort</strong></b></u></h2>
+            <p dir="ltr"><b><strong>Time Complexity: </strong></b><span>O(N log N)</span><br><b><strong>Auxiliary Space: </strong></b><span>O(log n), due to the recursive call stack. However, auxiliary space can be O(1) for iterative implementation.</span></p>
+            <h2><u><b><strong>Advantages of Heap Sort:</strong></b></u></h2>
+            <ul><li value="1"><b><strong>Efficient Time Complexity: </strong></b><span>Heap Sort has a time complexity of O(n log n) in all cases. This makes it efficient for sorting large datasets. The </span><b><strong>log n </strong></b><span>factor comes from the height of the binary heap, and it ensures that the algorithm maintains good performance even with a large number of elements.</span></li><li value="2"><b><strong>Memory Usage – </strong></b><span>Memory usage can be minimal because apart from what is necessary to hold the initial list of items to be sorted, it needs no additional memory space to work</span></li><li value="3"><b><strong>Simplicity –&nbsp;</strong></b><span> It is simpler to understand than other equally efficient sorting algorithms because it does not use advanced computer science concepts such as recursion.</span></li></ul>
+            <h2><u><span>Disadvantages of Heap Sort:</span></u></h2>
+            <ul><li value="1"><b><strong>Costly</strong></b><span>: Heap sort is costly.</span></li><li value="2"><b><strong>Unstable</strong></b><span>: Heap sort is unstable. It might rearrange the relative order.</span></li><li value="3"><b><strong>Efficient:</strong></b><span> Heap Sort is not very efficient when working with highly complex data.&nbsp;</span></li></ul>
+    
+        </div><hr>
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

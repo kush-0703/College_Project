@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+
+        /* CSS for image card view */
+.image-card {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for image captions */
+.image-card-caption {
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5; /* Background color for caption */
+    border-top: 1px solid #ddd; /* Add a top border for caption */
+}
+
+.image-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>BioinformaticsJourney.com</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a class="Intro" href="Introductory_page.html">Intro to Bioinformatics</a>
+                <a class="applications" href="Applications.html">Applications of Bioinformatics</a>
+                <a class="scope" href="scope.html">Scope of Bioinformatics</a>
+                <a class="evolution" href="evolution.html">Evolution of Bioinformatics</a>
+                <a class="Daa" href="/DAA_Project.html">DAA_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+              <h1 class="w3-text-teal"><u>What are Bioinformatics Applications?</u></h1>
+              <p>Bioinformatics applications use computational tools and methods to analyze biological data. These applications have a wide range of uses, including:<br><br>
+              <ul><li><b>Sequence and analyze genomes:</b> Bioinformatics tools can sequence, annotate and compare genomes of various organisms, allowing researchers to understand the genetic makeup of organisms and identify genes responsible for particular traits.<br>For instance, bioinformatics tools can help identify genetic variations that cause various diseases, such as cancer, heart disease, and diabetes. By comparing the genomes of healthy and diseased individuals, researchers can discover mutations associated with the disease and develop targeted therapies to treat it.<br><br>
+              </li><li><b>Identify genes and their functions:</b> Bioinformatics applications can help researchers identify and classify genes based on their functions, thereby helping in understanding the role of genes in biological processes.<br>We can, for example, identify genes that are involved in the regulation of the immune system. By understanding the functions of these genes, researchers can develop treatments for autoimmune diseases such as rheumatoid arthritis, lupus, and multiple sclerosis.<br><br>
+              </li>
+                <div class="image-card">
+                <figure>
+                    <img alt="Applications" height="134" src="media/Applications.png" title="Applications" width="578">
+                  </figure>
+              </div>
+              <br>
+              <li>
+              <b>Predict protein structures and functions:</b>We can use Bioinformatics applications to predict protein structures and their functions based on their amino acid sequences, which can help drug discovery and protein engineering.<br>
+              For example, bioinformatics tools can predict the 3D structure of a protein molecule, which can help researchers design drugs that target specific proteins involved in diseases such as HIV, Alzheimer's, and cancer. By designing drugs that bind to particular protein parts, researchers can develop targeted therapies that are more effective and have fewer side effects.<br><br>
+            </li>
+            <li>
+              <b>Analyze gene expression data:</b>We can use Bioinformatics applications to analyze gene expression data to understand how genes are regulated in cells and tissues, helping identify biomarkers for diseases and develop treatments.<br>We can, for example, use bioinformatics tools to analyze gene expression data from cancer patients. By comparing the expression levels of genes in cancer cells to normal cells, researchers can identify upregulated or downregulated genes in cancer. These genes can then be used as biomarkers to diagnose the disease, monitor the progression of the disease, and develop targeted therapies.<br><br>
+            </li>
+            <li>
+              <b>Design new drugs and therapies:</b>We can use Bioinformatics applications to help design new drugs and therapies by predicting drug interactions and biological molecules.<br>For example, these bioinformatics tools can predict how a drug molecule will interact with a protein molecule in the body. By understanding the molecular interactions between drugs and proteins, researchers can develop more effective drugs with fewer side effects.<br><br></p></ul>
+            </li>
+            </div>
+          </div><hr>
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

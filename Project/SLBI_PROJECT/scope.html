@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+
+        /* CSS for image card view */
+.image-card {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for image captions */
+.image-card-caption {
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5; /* Background color for caption */
+    border-top: 1px solid #ddd; /* Add a top border for caption */
+}
+
+.image-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&#9665;</a>
+                <a class="Intro" href="Introductory_page.html">Intro to Bioinformatics</a>
+                <a class="applications" href="Applications.html">Applications of Bioinformatics</a>
+                <a class="scope" href="scope.html">Scope of Bioinformatics</a>
+                <a class="evolution" href="evolution.html">Evolution of Bioinformatics</a>
+                <a class="Daa" href="/DAA_Project.html">DAA_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+              <h1 class="w3-text-teal"><u>Best Job Opportunities in Bioinformatics in India</u></h1>
+              <div class="image-card">
+                <figure>
+                    <img alt="Carrers" height="334" src="media/careers.jpeg" title="Applications" width="678">
+                  </figure>
+              </div>
+              
+              <p>Pursuing Bioinformatics courses can open up a variety of job opportunities for bioinformatics in India as well as abroad. There are tons of Indian universities that offer bioinformatics courses both at the undergraduate and postgraduate levels. This is the reason why the bioinformatics scope in India has increased. By learning these bioinformatics courses, the graduates can get rewarding careers in bioinformatics. They can even start contributing to the advancement, and development in the fields of agriculture, healthcare, and environmental sciences.<br><br>
+                When it comes to the part of remuneration, the graduates with bioinformatics courses shall be able to receive different salaries in the field of bioinformatics. Depending keenly on the qualification, organisation, job role, and experience, the bioinformatics course salary can vary. Bioinformatician salaries can range from Rs. 3 lakhs to Rs. 6 lakhs p.a at the entry-level. MSc bioinformatics salary provides professionals with higher salaries ranging from Rs. 6 lakhs to Rs. 15 lakhs every year. For senior-level positions, Bioinformatician salaries may even reach up to Rs. 20 lakhs p.a. Since the scope of bioinformatics is vast,a list of top Bioinformatics jobs in India is given in the coming sections below.<br><br>
+                <ol><strong>Bioinformatics Software Developer</strong><br><br>A Bioinformatics Software Developer is one of the popular jobs in bioinformatics. Bioinformatics Software Developers work on the development of the existing software and the tools related to it. They are expected to have analytical skills as well as good communication skills. Bioinformatics Software Developers must be creative in their work to be able to create new tools and new algorithms. They need to have good knowledge of essential hard skills such as SQL and Python. Companies building computational tools mostly hire Bioinformatics Software Developers.<br><br>
+                    <strong>Bioinformatics Research Scientist</strong><br><br>As one of the jobs in bioinformatics in India, Bioinformatics Scientists are individuals who use computational methods to study the living system on Earth. Based on the datasets and the outcomes from the computational methods, they find answers and provide new information related to the field of Biology. After pursuing a Ph.D. in Bioinformatics, a Bioinformatics Scientist can take up several research positions.<br><br>
+                        <strong>Bioinformatics Analyst</strong><br><br>A Bioinformatics Analyst studies the complex nature of the life chain while working on biological data. This is another one of the bioinformatics jobs in India. He or she is responsible for conducting research in laboratories, developing informatics algorithms, and creating databases that can help in the future analysis of several diseases and other physical conditions. To some extent, a Bioinformatics Analyst is similar to a bioinformatics scientist. These professionals explore job opportunities for bioinformatics after pursuing a master’s degree or Ph.D.<br><br>
+                            <strong>Bioinformatics Engineer</strong><br><br>Among the top jobs in bioinformatics in India is Bioinformatics Engineer. They are professionals who are responsible for creating those computational methods that scientists and other users who are researching the subject use for their further studies and analysis. They also need to have a good knowledge of the database. To become a bioinformatics engineer, one must have good hard skills such as SQL and Perl as well as have computational and statistical science knowledge.<br><br>
+                                <strong>Computational Biologist</strong><br><br>This is one of the best bioinformatics jobs for freshers as well as recent graduates. Computational Biologists use computational principles to study biological systems. They specialise in computational management, statistical processes, biological processes, and a high range of computation. From the initial level, they work on the findings of research with the help of information technology. For a computational biologist, a doctoral degree is required. Individuals with biomedical sciences, mathematics, computer science, or related field backgrounds are suitable for this job option. Having experience of three to five years proves to be significant for this among the top bioinformatics careers.<br><br>
+                                    <strong>Database Programmer</strong><br><br>A Database Programmer is among the top jobs in bioinformatics. He or she develops computer programmes and updates them. Database Programmers are responsible for database management and creating new codes for programmes as per requirement. This one of the bioinformatics careers also helps in improving the overall quality of the database.<br><br>
+                                        <strong>Bioinformatician</strong><br><br>There is significant scope for bioinformatics courses in India and abroad. As one of the jobs in bioinformatics, Bioinformaticians are professionals who apply computational techniques to analyse biological data. They develop algorithms, design databases, and use software tools to extract meaningful insights from large datasets. Bioinformaticians work closely with Biologists and Geneticists to solve complex biological problems and contribute to scientific discoveries. Bioinformatician salaries can vary depending on education, experience, job role, and organisation, among other factors<br><br>
+                                            <strong>Individual Contributor</strong><br><br>In both academic and commercial divisions, many laboratories are picking up individuals who are trained in bioinformatics to support their research which has to be conducted in the lab. Individual Contributors are another one of the best jobs in bioinformatics, which are available for various levels and there are different types of training available as per the positions too. People as Individual Contributors typically work on a particular area of research after the initial training. Those who are pursuing their higher studies pursue this career in bioinformatics. This kind of bioinformatics salary in India jobs in bioinformatics is beneficial for increasing an individual’s experience in the field of bioinformatics.<br><br>
+                                                <strong>Core Facilities</strong><br><br>There are certain institutions that are responsible for creating a central resource for laboratories. These resources are known as core facilities. Individuals can find various jobs in bioinformatics after MSc Bioinformatics programmes. These core facilities are managed by a team of members of an institution. There are workshops that are held in order to inform the different managers of the core facilities about the new skills, challenges, solutions, and experiences that require to be shared within them. Members of such groups are known to have a mix of various relevant skills. They work on different types of research studies.<br><br>
+                                                <strong>Educator</strong><br><br>The scope of bioinformatics in India is vast. There are many universities and colleges that hire professors or educators who can teach bioinformatics to students. To pursue this one of the jobs in bioinformatics, individuals need to have a bachelor's degree followed by a master’s degree and a PhD in bioinformatics as there are numerous BSc Bioinformatics jobs and MSc Bioinformatics jobs. Educators also require good communication and teaching skills which can be inherited through experience in teaching at the university level.With this number of jobs in bioinformatics, it is clear that there are huge bioinformatics course scope. In addition to these bioinformatics careers and lucrative jobs in bioinformatics, other BSc Bioinformatics jobs and MSc Bioinformatics jobs include Bioinformatics Consultant, Clinical Bioinformatician, Computational Biologist, and Bioinformatics Project Manager. Pursuing higher education, such as a Ph.D., can further advance bioinformatics course scope and bioinformatics career options while enabling individuals to lead to leadership positions or academic careers.<br><br></ol>
+              <p><strong>Conclusion</strong><br>Now, when the question arises of whether bioinformatics is a good career in India or not? Then after going through this article, one can answer that yes, it is one of the most rapidly, and promising evolving career fields in the sectors of science and technology. Bioinformatics graduates can work in scientific research institutes, and can even teach in different private and government colleges, and even at manufacturing units of biomedical products. Thus one can easily consider the different job opportunities after bioinformatics in India.
+              </p>
+            </div>
+          </div><hr>  
+
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

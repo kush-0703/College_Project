@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Interactive buttons */
+        .button {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content sections */
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left .3s;
+            padding: 20px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky header -->
+    <div class="header">
+        <center><h1>Sorting Algorithms</h1></center>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="DAA_Project.html">Home</a>
+                <a href="bubble.html">Bubble Sort</a>
+                <a href="Quick.html">Quick Sort</a>
+                <a href="merge.html">Merge Sort</a>
+                <a href="insertion.html">Insertion Sort</a>
+                <a href="selection.html">Selection Sort</a>
+                <a href="heap.html">Heap Sort</a>
+                <a href="SLBI_PROJECT/Introductory_page.html">SLBI_PROJECT</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="bubble" class="section">
+        
+    <div class="row">
+        <div class="twothird container">
+            <h1 class="text-teal"><u>Selection Sort</u></h1>
+            <p>The selection sort algorithm is a simple and efficient method for sorting arrays. It repeatedly selects
+                the minimum (or maximum) element from the unsorted part of the array and places it in its correct
+                position in the sorted part.<br>While it is easy to understand and implement, the average and worst-case
+                time complexity of selection sort is O(n^2), making it less suitable for large datasets.</p>
+            <figure>
+                <img alt="Sorting an array" src="media/selection_sort.png"
+                    title="Bubble Sort">
+                <figcaption>Illustration of sorting an array in ascending order.</figcaption>
+            </figure>
+        </div>
+        <div>
+            <h2><u>Complexity Analysis of Selection Sort</u></h2>
+            <p><strong>Time Complexity:</strong> The time complexity of Selection Sort is <strong>O(N<sup>2</sup>)</strong> as there are two nested loops:</p>
+            <ul><li>One loop to select an element of Array one by one = O(N)</li><li>Another loop to compare that element with every other Array element = O(N)</li><li>Therefore overall complexity = O(N) * O(N) = O(N*N) = O(N<sup>2</sup>)</li></ul>
+            <p><strong>Auxiliary Space:</strong> O(1) as the only extra memory used is for temporary variables while swapping two values in Array. The selection sort never makes more than O(N) swaps and can be useful when memory writing is costly.&nbsp;</p>
+            <h2><u>Advantages of Selection Sort Algorithm</u></h2>
+            <ul><li>Simple and easy to understand.</li><li>Works well with small datasets.</li></ul>
+            <h2><strong><u>Disadvantages of the Selection Sort Algorithm</u></strong></h2>
+            <ul><li>Selection sort has a time complexity of O(n^2) in the worst and average case.</li><li>Does not work well on large datasets.</li><li>Does not preserve the relative order of items with equal keys which means it is not stable.</li></ul>
+        </div><hr>
+
+    </div>
+
+   
+
+    <!-- Sidebar (if needed) -->
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <!-- JavaScript for opening and closing sidebar, if applicable -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
